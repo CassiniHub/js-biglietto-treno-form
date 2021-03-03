@@ -19,8 +19,8 @@
       var userAgeNum         = parseInt(userAge);
       var euroForKm          = 0.21;
       var ticketPrice        = (userKmNum * euroForKm);
-      var ticketPriceUnder18 = Math.floor(ticketPrice * 0.80);
-      var ticketPriceOver65  = Math.floor(ticketPrice * 0.60);
+      var ticketPriceUnder18 = ticketPrice * 0.80;
+      var ticketPriceOver65  = ticketPrice * 0.60;
 
       console.log(userKm, userKmNum, userAge, userAgeNum, ticketPrice);
 
