@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/placeholder.css">
+  </head>
+
+  <body>
+
+    <!-- JS -->
+    <script>
+
+      var userKm             = prompt("Quanti kilometri vuoi percorrere?");
+      var userAge            = prompt("Quanti anni hai?");
+      var userKmNum          = parseInt(userKm);
+      var userAgeNum         = parseInt(userAge);
+      var euroForKm          = 0.21;
+      var ticketPrice        = (userKmNum * euroForKm);
+      var ticketPriceUnder18 = Math.floor(ticketPrice * 0.80);
+      var ticketPriceOver65  = Math.floor(ticketPrice * 0.60);
+
+      console.log(userKm, userKmNum, userAge, userAgeNum, ticketPrice);
+
+      if (userAge < 18) {
+
+        console.log("Il prezzo del biglietto è di: €" + ticketPriceUnder18);
+      } else if (userAge > 65){
+
+        console.log("Il prezzo del biglietto è di: €" + ticketPriceOver65);
+      } else {
+
+        console.log("Il prezzo del biglietto è di: €" + ticketPrice);
+      }
+    </script>
+  </body>
+</html>
