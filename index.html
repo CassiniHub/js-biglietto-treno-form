@@ -13,26 +13,29 @@
     <!-- JS -->
     <script>
 
-      var userKm             = prompt("Quanti kilometri vuoi percorrere?");
-      var userAge            = prompt("Quanti anni hai?");
-      var userKmNum          = parseInt(userKm);
-      var userAgeNum         = parseInt(userAge);
-      var euroForKm          = 0.21;
-      var ticketPrice        = (userKmNum * euroForKm);
-      var ticketPriceUnder18 = ticketPrice * 0.80;
-      var ticketPriceOver65  = ticketPrice * 0.60;
+      var userKm                    = prompt("Quanti kilometri vuoi percorrere?");
+      var userAge                   = prompt("Quanti anni hai?");
+      var userKmNum                 = parseInt(userKm);
+      var userAgeNum                = parseInt(userAge);
+      var euroForKm                 = 0.21;
+      var ticketPrice               = (userKmNum * euroForKm);
+      var ticketPriceUnder18        = ticketPrice * 0.80;
+      var ticketPriceOver65         = ticketPrice * 0.60;
+      var ticketPriceRounded        = ticketPrice.toFixed(2);
+      var ticketPriceUnder18Rounded = ticketPriceUnder18.toFixed(2);
+      var ticketPriceOver65Rounded  = ticketPriceOver65.toFixed(2);
 
-      console.log(userKm, userKmNum, userAge, userAgeNum, ticketPrice);
+      console.log(userKm, userKmNum, userAge, userAgeNum, ticketPrice, ticketPriceUnder18Rounded);
 
       if (userAge < 18) {
 
-        console.log("Il prezzo del biglietto è di: €" + ticketPriceUnder18);
+        console.log("Il prezzo del biglietto è di: €" + ticketPriceUnder18Rounded);
       } else if (userAge > 65){
 
-        console.log("Il prezzo del biglietto è di: €" + ticketPriceOver65);
+        console.log("Il prezzo del biglietto è di: €" + ticketPriceOver65Rounded);
       } else {
 
-        console.log("Il prezzo del biglietto è di: €" + ticketPrice);
+        console.log("Il prezzo del biglietto è di: €" + ticketPriceRounded);
       }
     </script>
   </body>
